@@ -9,13 +9,11 @@ const Messages = () => {
   const { user } = useMoralis();
   const { data, loading, error } = useMoralisQuery(
     "Messages",
-    (query) =>
-      query
-        .ascending("createdAt")
-        .greaterThan(
-          "createdAt",
-          new Date(Date.now() - MINS_DURATION * 60 * 1000)
-        ),
+    (query) => query.ascending("createdAt"),
+    // .greaterThan(
+    //   "createdAt",
+    //   new Date(Date.now() - MINS_DURATION * 60 * 1000)
+    // ),
     [],
     {
       live: true,
