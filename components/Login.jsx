@@ -27,9 +27,10 @@ const Login = () => {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="text-6xl font-black w-1/4 text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-pink-500"
+          className="text-4xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-pink-500"
         >
-          Welcome to Metalliop
+          Welcome to <br />
+          Metalliop
         </motion.p>
         <motion.div
           initial={{ y: 450 }}
