@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useMoralis } from "react-moralis";
 import Avatar from "./Avatar";
 import ChangeUsername from "./ChangeUsername";
+import Logout from "./Logout";
 
 const Header = () => {
   const { user } = useMoralis();
@@ -22,6 +23,7 @@ const Header = () => {
           <h1 className="text-3xl">Welcome to Metalliop</h1>
           <h2 className="text-5xl font-bold truncate">{user.getUsername()}</h2>
           <ChangeUsername />
+          <Logout />
         </div>
       </div>
     </div>
