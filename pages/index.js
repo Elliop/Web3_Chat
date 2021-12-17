@@ -18,7 +18,6 @@ export default function Home() {
       </Head>
       <div className="max-w-screen-2xl mx-auto">
         <Header />
-        {/* msgs */}
       </div>
       <button
         className="py-2 px-6 font-bold rounded-lg text-white bg-cyan-700 animate-pulse"
