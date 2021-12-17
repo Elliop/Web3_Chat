@@ -21,7 +21,6 @@ const Messages = () => {
       live: true,
     }
   );
-  console.log(data);
   const endOfMessagesRef = useRef(null);
   return (
     <div className="pb-56">

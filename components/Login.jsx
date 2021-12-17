@@ -41,6 +41,7 @@ const Login = () => {
           <p className="font-bold text-xl text-slate-400">Own Your Data</p>
         </motion.div>
         <motion.button
+          variants={containerVariants}
           initial={{ y: 450 }}
           animate={{ y: 10 }}
           transition={{ delay: 2.4, type: "spring", stiffness: 40 }}
