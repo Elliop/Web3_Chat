@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <div className="h-screen">
       <Head>
-        <title>Metaverse</title>
+        <title>Metalliop</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col justify-center items-center w-full h-screen space-y-4">
-        <h1>Welcome to Metaverse!</h1>
+        <h1>Welcome to Metalliop!</h1>
         <button
           className="py-2 px-6 font-bold rounded-lg text-white bg-cyan-700 animate-pulse"
           onClick={logout}
