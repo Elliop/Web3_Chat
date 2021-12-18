@@ -25,7 +25,9 @@ const Message = ({ message }) => {
             : "rounded-bl-none bg-blue-400"
         }`}
       >
-        <p>{message.get("message")}</p>
+        <p className="break-words inline-block w-full">
+          {message.get("message")}
+        </p>
       </div>
       <TimeAgo
         className={`text-[10px] italic text-gray-400 ${

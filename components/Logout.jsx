@@ -1,6 +1,6 @@
 import { useMoralis } from "react-moralis";
 
-const ChangeUsername = () => {
+const Logout = () => {
   const { logout } = useMoralis();
 
   return (
@@ -10,4 +10,4 @@ const ChangeUsername = () => {
   );
 };
 
-export default ChangeUsername;
+export default Logout;
