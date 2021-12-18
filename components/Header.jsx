@@ -25,8 +25,10 @@ const Header = () => {
           </div>
           <h1 className="text-2xl">Welcome to Metalliop</h1>
           <h2 className="text-3xl font-bold truncate">{user.getUsername()}</h2>
-          <ChangeUsername />
-          <Logout />
+          <div className="space-y-8">
+            <ChangeUsername />
+            <Logout />
+          </div>
         </div>
       </div>
     </div>

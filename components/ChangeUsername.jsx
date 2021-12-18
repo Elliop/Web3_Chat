@@ -1,6 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
 import { useMoralis } from "react-moralis";
+import { PencilIcon } from "@heroicons/react/outline";
 
 const ChangeUsername = () => {
   const { setUserData, isUserUpdating, user } = useMoralis();
@@ -18,7 +19,13 @@ const ChangeUsername = () => {
 
   return (
     <div className="text-sm absolute top-5 right-5 hover:text-pink-700">
-      <button onClick={() => setIsOpen(true)}>Change Your Username</button>
+      <div
+        className="flex justify-center items-center space-x-1 py-2 px-4 border-2 rounded-full 
+      bg-black bg-opacity-60 border-pink-500 shadow-md hover:shadow-fuchsia-600"
+      >
+        <PencilIcon className="w-4 h-4" />
+        <button onClick={() => setIsOpen(true)}>Change Your Username</button>
+      </div>
       <Transition.Root show={isOpen} as={Fragment}>
         <Dialog
           as="div"
