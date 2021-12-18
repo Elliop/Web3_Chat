@@ -20,7 +20,7 @@ const ChangeUsername = () => {
   return (
     <div className="text-sm absolute top-5 right-5 hover:text-pink-700">
       <div
-        className="flex justify-center items-center space-x-1 py-2 px-4 border-2 rounded-full 
+        className="flex justify-center items-center space-x-1 py-2 px-4 border-2 rounded-full cursor-pointer
       bg-black bg-opacity-60 border-pink-500 shadow-md hover:shadow-fuchsia-600"
       >
         <PencilIcon className="w-4 h-4" />

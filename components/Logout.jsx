@@ -5,7 +5,7 @@ const Logout = () => {
   const { logout } = useMoralis();
 
   return (
-    <div className="text-sm absolute top-12 right-5 hover:text-pink-700">
+    <div className="text-sm absolute top-12 right-5 hover:text-pink-700 cursor-pointer">
       <div
         className="flex justify-center items-center space-x-2 py-2 px-4 border-2 rounded-full 
       bg-black bg-opacity-60 border-pink-500 shadow-md hover:shadow-fuchsia-600"
