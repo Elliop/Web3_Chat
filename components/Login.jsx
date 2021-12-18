@@ -2,7 +2,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useMoralis } from "react-moralis";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const welcomeVariants = {
   hidden: {
@@ -68,9 +68,17 @@ const Login = () => {
   const { authenticate } = useMoralis();
   const [animate, setAnimate] = useState(false);
   const router = useRouter();
-  setTimeout(() => {
-    setAnimate(true);
-  }, 5000);
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setAnimate(true);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <div className="bg-black relative text-white">
       <div className="flex flex-col absolute z-50 h-4/5 w-full items-start justify-center space-y-4 space-x-8">
