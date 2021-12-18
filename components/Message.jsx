@@ -19,7 +19,7 @@ const Message = ({ message }) => {
         <Avatar username={message.get("username")} />
       </div>
       <div
-        className={`flex space-x-4 p-3 rounded-t-lg ${
+        className={`flex space-x-4 p-3 max-w-2xl overflow-y-auto rounded-t-lg ${
           isUserMesssage
             ? "rounded-br-none bg-pink-300"
             : "rounded-bl-none bg-blue-400"

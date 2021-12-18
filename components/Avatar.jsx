@@ -6,13 +6,12 @@ const Avatar = ({ username }) => {
   return (
     <div>
       <Image
-        className="bg-black rounded-full cursor-pointer hover:opacity-75"
+        className="bg-transparent rounded-full cursor-pointer hover:opacity-75"
         src={`https://avatars.dicebear.com/api/pixel-art/${
           username || user.get("username")
         }.svg`}
         layout="fill"
       />
-      {/*  */}
     </div>
   );
 };

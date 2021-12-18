@@ -64,7 +64,7 @@ const Login = () => {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="text-4xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-pink-500"
+          className="text-4xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-pink-700 to-blue-300"
         >
           Welcome to <br />
           Metalliop

@@ -30,7 +30,7 @@ const Messages = () => {
       <div className="flex justify-center">
         <SendMessage endOfMessagesRef={endOfMessagesRef} />
       </div>
-      <div ref={endOfMessagesRef} className="text-center text-gray-400 mt-5">
+      <div ref={endOfMessagesRef} className="text-center text-gray-300 mt-5">
         <p>{user.getUsername()} You're up to date! 😼</p>
       </div>
     </div>
