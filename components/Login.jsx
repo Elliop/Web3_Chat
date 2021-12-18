@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useMoralis } from "react-moralis";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
-const containerVariants = {
+const welcomeVariants = {
   hidden: {
     opacity: 0,
   },
@@ -49,9 +50,24 @@ const buttonVariants = {
   },
 };
 
+const walletVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: { delay: 2.8, duration: 1.5 },
+  },
+  exit: {
+    x: "-100vh",
+    transition: { ease: "easeInOut" },
+  },
+};
+
 const Login = () => {
   const { authenticate } = useMoralis();
   const [animate, setAnimate] = useState(false);
+  const router = useRouter();
   setTimeout(() => {
     setAnimate(true);
   }, 5000);
@@ -60,7 +76,7 @@ const Login = () => {
       <div className="flex flex-col absolute z-50 h-4/5 w-full items-start justify-center space-y-4 space-x-8">
         <div></div>
         <motion.p
-          variants={containerVariants}
+          variants={welcomeVariants}
           initial="hidden"
           animate="visible"
           exit="exit"
@@ -89,6 +105,22 @@ const Login = () => {
         >
           Login
         </motion.button>
+        <motion.div
+          variants={walletVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          <p className="text-slate-500">
+            Dont have a wallet?
+            <span
+              onClick={() => router.push("https://metamask.io/")}
+              className="cursor-pointer italic"
+            >
+              {` Create one now!`}
+            </span>
+          </p>
+        </motion.div>
       </div>
       <div className="w-full h-screen">
         <Image src="/moon-36.gif" layout="fill" objectFit="cover" />
